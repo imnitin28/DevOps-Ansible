@@ -1,0 +1,17 @@
+Example 1:
+
+--- # A list of cars
+Cars:
+-Hyundai
+ Toyota
+ Maruti
+ Tesla
+ 
+ 
+Example 2:
+--- # Employee Details
+Developer:
+-name: Nitin
+ job: Engineer
+ skill: DevOps
+ experience: 0yr
