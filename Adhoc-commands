@@ -1,0 +1,13 @@
+Example 1 : 
+ansible demo -a "ls"
+
+Example 2:
+ansible demo[0] -a "touch newFile"
+
+Example 3:
+ansible demo[-1] -a "ls -al"
+
+Example 4:
+ansible demo -a "sudo yum install httpd -y"
+
+Note: demo is the group name of my managed instances from hosts file  
