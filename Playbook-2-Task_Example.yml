@@ -1,7 +1,6 @@
 
-Example 2:
 
---- # playbook-2 example with some task
+--- # Example 2:playbook-2 example with some task
 - hosts: demo
   user: ansible
   become: yes
