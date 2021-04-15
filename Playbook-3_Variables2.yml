@@ -1,0 +1,14 @@
+--- # install java and download kafka without variable
+- name: install kafka
+  hosts: demo
+  become: true
+  tasks:
+          - name: install java
+            yum:
+                    name: java
+                    state: latest
+          - name: download Kafka
+            get_url:
+                    url: https://mirrors.estointernet.in/apache/kafka/2.7.0/kafka-2.7.0-src.tgz
+                    dest: /usr/local
+
