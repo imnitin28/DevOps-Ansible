@@ -2,6 +2,7 @@
 # tasks file for mysqlRole
 - name: install MySql-MariaDB
   yum: name="{{ pkg_name }}" state=present
+  when: ansible_os_family=="RedHat"
   notify: start mysql
 - template:
           src: versionOS.j2
