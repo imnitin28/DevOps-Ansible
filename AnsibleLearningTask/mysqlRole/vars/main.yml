@@ -1,0 +1,3 @@
+---
+# vars file for mysqlRole
+pkg_name: mariadb-server

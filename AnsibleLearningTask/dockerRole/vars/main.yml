@@ -1,0 +1,3 @@
+---
+# vars file for dockerRole
+pkg_name: docker

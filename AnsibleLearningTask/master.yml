@@ -1,0 +1,14 @@
+--- # Master Playbook
+- name: Manage mysql,nginx,jenkins,docker
+  hosts: all
+  gather_facts: true
+  tasks:
+   - setup:
+       filter: ansible_*
+  become: yes
+  connection: ssh
+  roles:
+    - mysqlRole
+    - dockerRole
+    - nginxRole
+    - jenkinsRole2

@@ -1,0 +1,8 @@
+---
+# vars file for jenkinsRole2
+java:
+  version: "java-1.8.0-openjdk"
+
+jenkins:
+  url: "http://pkg.jenkins-ci.org/redhat/jenkins.repo"
+  gpg_key: "https://pkg.jenkins.io/redhat/jenkins.io.key"

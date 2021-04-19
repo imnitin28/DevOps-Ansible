@@ -1,0 +1,32 @@
+---
+# tasks file for jenkinsRole2
+# jenkins by default needs java
+# - name: install java
+#   yum: name="{{version}}" state=present
+- name: Installing Java 8
+  yum:
+    name: "{{java.version}}"
+    state: present
+  become: true
+
+- name: Download Jenkins  
+  get_url:
+    url: "{{jenkins.url}}"
+    dest: /etc/yum.repos.d/jenkins.repo
+  become: true
+
+- name: Import GPG Key
+  rpm_key:
+    state: present
+    key: "{{jenkins.gpg_key}}"
+
+- name: Install Jenkins
+  become: true
+  yum:
+    name: jenkins
+    state: present
+  notify: Start Jenkins service and enable on boot
+  
+- template:
+          src: versionOS.j2
+          dest: ./fileJenkins.txt

@@ -1,0 +1,8 @@
+---
+# tasks file for dockerRole
+- name: install Docker
+  yum: pkg="{{ pkg_name }}" state=present
+  notify: start docker
+- template:
+          src: versionOS.j2
+          dest: ./fileDocker.txt
