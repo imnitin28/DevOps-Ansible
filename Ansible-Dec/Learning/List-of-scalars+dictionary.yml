@@ -1,0 +1,17 @@
+- name : nitin
+  dept : devops
+  salary : 10000
+  permanent : true
+- name : shivani
+  dept : devops
+  salary : 20000
+  permanent : true
+- name : Gaurav
+  dept : Java
+  salary : 30000
+  permanent : true
+  target :
+    qtr1: 1000
+    qtr2: 2000
+    qtr3: 3000
+

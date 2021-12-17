@@ -1,0 +1,17 @@
+- name: Stop ec2 instance
+  hosts: localhost
+
+  tasks:
+        - name: Stop instance using module
+          ec2:
+              id: idempotent-ec2-module
+              image: ami-083bbff3417d484ab
+              instance_type: t2.micro
+              region: ap-south-1
+              count: 2
+              state: stopped
+              instance_tags:
+                          name: knoldus
+                          web: server
+              wait: yes
+          

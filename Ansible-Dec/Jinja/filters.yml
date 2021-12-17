@@ -1,0 +1,11 @@
+- hosts: localhost
+  vars:
+    greeting: Hello Knolders!
+  tasks:
+    - name: Sum Filter example
+      debug:
+        msg: "{{[4,2,8,4,1,8,2,7] | sum()}}"
+    - name: Sort Filter example
+      debug:
+        msg: "{{[4,2,8,4,1,8,2,7] | sort()}}"
+          

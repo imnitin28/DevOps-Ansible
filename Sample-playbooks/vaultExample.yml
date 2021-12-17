@@ -1,0 +1,19 @@
+--- # Example-6 Playbook demonstrating conditionals, password protected
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+         - name: install apache
+           command: apt-get -y install apache2
+           when: ansible_os_family=="Debian"
+         - name: install apache server for redhat family
+           command: yum -y install httpd
+           when: ansible_os_family=="RedHat"
+
+# vault used to keep sensitive data such as password keys in encrypted files rather than plain text in playbook
+# create new encrypted playbook : ansible-vault create vault1.yml
+# edit encrypted playbook : ansible-vault edit vault1.yml
+# change password : ansible-vault rekey vault1.yml
+# encrypt existing playbook : ansible-vault encrypt vault2.yml (be sure vault2.yml is not encrypted already)
+# To decrypt an encrypted playbook : ansible-vault decrypt vault2.yml

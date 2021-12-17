@@ -1,0 +1,35 @@
+---
+
+host: localhost
+
+- name: "this is my first play "
+
+  tasks:
+
+    -
+
+      module: run_module
+
+      name: "this is my frst task"
+
+    -
+
+      module: run_module
+
+      name: "this is my second module "
+
+vars:
+
+  dict_var:
+
+    age: '3'0
+
+    name: rohit
+
+  list_var:
+
+    -list1
+
+    -list2
+
+- name: rohit

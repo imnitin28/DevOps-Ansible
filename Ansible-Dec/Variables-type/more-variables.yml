@@ -1,0 +1,10 @@
+- hosts: localhost
+  vars:
+    greeting: Hello Knolders!
+    region:
+          - us
+          - europe
+          - asia
+  tasks:
+    - debug:
+        msg: "{{region[0]}}"

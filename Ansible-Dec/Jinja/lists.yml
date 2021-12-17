@@ -1,0 +1,8 @@
+- name: variable example
+  hosts: localhost
+
+  vars:
+     test: abc
+  tasks:
+    - debug:
+        msg: "{{[1,2,3,4,5]}}"
