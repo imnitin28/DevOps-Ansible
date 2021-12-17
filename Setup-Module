@@ -1,7 +1,0 @@
-Whenever any playbook or module is executed "setup command" is executed to check if content/package is already available or not.
-
-Command: 
-ansible demo -m setup
-
-# demo is the group name of managed node
--m is for module
